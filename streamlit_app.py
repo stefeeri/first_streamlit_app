@@ -34,3 +34,5 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #command to normalize the information on the screen
 streamlit.dataframe(fruityvice_normalized)
 
+requirements.txt
+
