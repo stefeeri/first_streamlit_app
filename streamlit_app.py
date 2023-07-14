@@ -38,7 +38,7 @@ import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT CURRENT_USER('stef'), CURRENT_ACCOUNT('OR71088'), CURRENT_REGION('ca-central-1')")
+my_cur.execute("SELECT CURRENT_USER('stef'), CURRENT_ACCOUNT('OR71088'), CURRENT_REGION('ca-central-1'), CURRENT_CLOUD('aws')")
 my_data_row = my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
